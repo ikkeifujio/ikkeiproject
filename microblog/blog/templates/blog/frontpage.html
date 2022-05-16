@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %} <!-- base.htmlを継承している -->
+{% block content %} 
+{% for post in posts %}
+<div class="post block">
+<h2 class="subtitle">{{post.title}}</h2>
+<small>posted at{{post.posted.date}}</small>
+<p>{{post.intro}}</p>
+<hr>
+
+
+</div>
+{%endfor%}
+{% endblock %}
